@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Dec 26 13:00:53 2025
+| Date         : Fri Dec 26 16:49:37 2025
 | Host         : DESKTOP-SF07F6R running 64-bit major release  (build 9200)
 | Command      : report_drc -file Stopwatch_drc_opted.rpt -pb Stopwatch_drc_opted.pb -rpx Stopwatch_drc_opted.rpx
 | Design       : Stopwatch

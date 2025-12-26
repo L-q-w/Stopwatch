@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Fri Dec 26 13:01:10 2025
+| Date             : Fri Dec 26 16:49:56 2025
 | Host             : DESKTOP-SF07F6R running 64-bit major release  (build 9200)
 | Command          : report_power -file Stopwatch_power_routed.rpt -pb Stopwatch_power_summary_routed.pb -rpx Stopwatch_power_routed.rpx
 | Design           : Stopwatch
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.408        |
+| Total On-Chip Power (W)  | 0.193        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.337        |
-| Device Static (W)        | 0.071        |
+| Dynamic (W)              | 0.121        |
+| Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 4.8          |
-| Max Ambient (C)          | 78.3         |
-| Junction Temperature (C) | 31.7         |
+| Max Ambient (C)          | 84.1         |
+| Junction Temperature (C) | 25.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.698 |      253 |       --- |             --- |
-|   LUT as Logic |     0.607 |      110 |     20800 |            0.53 |
-|   Register     |     0.044 |       97 |     41600 |            0.23 |
-|   CARRY4       |     0.041 |       13 |      8150 |            0.16 |
+| Slice Logic    |     0.058 |      134 |       --- |             --- |
+|   LUT as Logic |     0.047 |       64 |     20800 |            0.31 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        9 |       --- |             --- |
-| Signals        |     0.630 |      203 |       --- |             --- |
-| I/O            |     0.008 |       27 |       210 |           12.86 |
-| Static Power   |     0.071 |          |           |                 |
-| Total          |     1.408 |          |           |                 |
+|   Register     |     0.003 |       50 |     41600 |            0.12 |
+|   CARRY4       |     0.002 |        8 |      8150 |            0.10 |
+|   Others       |     0.000 |        4 |       --- |             --- |
+| Signals        |     0.042 |      114 |       --- |             --- |
+| I/O            |     0.021 |       26 |       210 |           12.38 |
+| Static Power   |     0.072 |          |           |                 |
+| Total          |     0.193 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.349 |       1.337 |      0.012 |
-| Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vccint    |       1.000 |     0.113 |       0.104 |      0.010 |
+| Vccaux    |       1.800 |     0.013 |       0.001 |      0.013 |
+| Vcco33    |       3.300 |     0.006 |       0.005 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -135,14 +135,11 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------+-----------+
-| Name      | Power (W) |
-+-----------+-----------+
-| Stopwatch |     1.337 |
-|   c_ctrl  |     0.453 |
-|   key_d   |     0.009 |
-|   smg_L2  |     0.410 |
-|   smg_R4  |     0.431 |
-+-----------+-----------+
++------------------+-----------+
+| Name             | Power (W) |
++------------------+-----------+
+| Stopwatch        |     0.121 |
+|   countdown_inst |     0.085 |
++------------------+-----------+
 
 

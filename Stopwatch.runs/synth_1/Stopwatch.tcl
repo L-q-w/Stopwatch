@@ -18,6 +18,8 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,6 +33,7 @@ set_property ip_output_repo d:/Pack/Creation/Vivado/Stopwatch/Stopwatch.cache/ip
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sources_1/new/count_ctrl.v
+  D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sources_1/new/countdown_timer.v
   D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sources_1/new/key_debounce.v
   D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sources_1/new/smg.v
   D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sources_1/new/Stopwatch.v

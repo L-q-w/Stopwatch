@@ -23,9 +23,10 @@
 module smg(
     input clk,
     input rst,
+    input [3:0]dp_ctrl,
     input [15:0] dispdata,
-    output reg [ 7:0] seg,
-    output reg [ 3:0] an);
+    output reg [7:0] seg,
+    output reg [3:0] an);
     reg [16:0] divclk_cnt;
     reg divclk;
     reg [3:0] disp_dat; //要显示的数据
@@ -50,6 +51,7 @@ module smg(
     end
     always@(posedge divclk or negedge rst)
     begin
+        seg[7] <= 1'b0;
         if(!rst)
         begin
             an <= 4'b0000;
@@ -63,21 +65,25 @@ module smg(
                 begin
                     disp_dat <= dispdata[3:0];
                     an <= 4'b0001;
+                    seg[7] <= dp_ctrl[0];
                 end
                 2'h1:
                 begin
                     disp_dat <= dispdata[7:4];
                     an <= 4'b0010;
+                    seg[7] <= dp_ctrl[1];
                 end
                 2'h2:
                 begin
                     disp_dat <= dispdata[11:8];
                     an <= 4'b0100;
+                    seg[7] <= dp_ctrl[2];
                 end
                 2'h3:
                 begin
                     disp_dat <= dispdata[15:12];
                     an <= 4'b1000;
+                    seg[7] <= dp_ctrl[3];
                 end
             endcase
         end
@@ -85,22 +91,22 @@ module smg(
     always@(disp_dat)
     begin
         case(disp_dat)
-            4'h0: seg = 8'h3f;
-            4'h1: seg = 8'h06;
-            4'h2: seg = 8'h5b;
-            4'h3: seg = 8'h4f;
-            4'h4: seg = 8'h66;
-            4'h5: seg = 8'h6d;
-            4'h6: seg = 8'h7d;
-            4'h7: seg = 8'h07;
-            4'h8: seg = 8'h7f;
-            4'h9: seg = 8'h6f;
-            4'ha: seg = 8'h77;
-            4'hb: seg = 8'h7c;
-            4'hc: seg = 8'h39;
-            4'hd: seg = 8'h5e;
-            4'he: seg = 8'h79;
-            4'hf: seg = 8'h71;
+            4'h0: seg <= 8'h3f;
+            4'h1: seg <= 8'h06;
+            4'h2: seg <= 8'h5b;
+            4'h3: seg <= 8'h4f;
+            4'h4: seg <= 8'h66;
+            4'h5: seg <= 8'h6d;
+            4'h6: seg <= 8'h7d;
+            4'h7: seg <= 8'h07;
+            4'h8: seg <= 8'h7f;
+            4'h9: seg <= 8'h6f;
+            4'ha: seg <= 8'h77;
+            4'hb: seg <= 8'h7c;
+            4'hc: seg <= 8'h39;
+            4'hd: seg <= 8'h5e;
+            4'he: seg <= 8'h79;
+            4'hf: seg <= 8'h71;
         endcase
     end
 endmodule

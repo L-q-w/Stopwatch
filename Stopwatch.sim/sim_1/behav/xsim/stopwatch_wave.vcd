@@ -1,0 +1,484 @@
+$date
+   Fri Dec 26 13:19:38 2025
+$end
+$version
+  2018.3
+$end
+$timescale
+  1ps
+$end
+$scope module tb_stopwatch $end
+$var reg 2 ! btn_in [1:0] $end
+$var reg 1 " clk $end
+$var wire 8 # seg_R4 [7:0] $end
+$var wire 8 $ seg_L2 [7:0] $end
+$var wire 8 % an [7:0] $end
+$var integer 32 & test_count $end
+$var integer 32 ' pass_count $end
+$var integer 32 ( error_count $end
+$var reg 4 ) test_phase [3:0] $end
+$var reg 32 * wait_counter [31:0] $end
+$var parameter 32 + CLK_PERIOD [31:0] $end
+$scope module uut $end
+$var wire 2 , btn_in [1:0] $end
+$var wire 1 - clk $end
+$var wire 8 # seg_R4 [7:0] $end
+$var wire 8 $ seg_L2 [7:0] $end
+$var wire 8 % an [7:0] $end
+$var wire 24 . disp_time [23:0] $end
+$var wire 2 / btn_out [1:0] $end
+$var reg 8 0 an_reg [7:0] $end
+$scope module c_ctrl $end
+$var wire 1 1 start_stop $end
+$var wire 1 - clk $end
+$var wire 1 2 rst $end
+$var wire 24 . disp_time [23:0] $end
+$var reg 20 3 divclk_cnt [19:0] $end
+$var reg 1 4 divclk $end
+$var reg 4 5 msec_l [3:0] $end
+$var reg 4 6 msec_h [3:0] $end
+$var reg 4 7 sec_l [3:0] $end
+$var reg 4 8 sec_h [3:0] $end
+$var reg 4 9 min_l [3:0] $end
+$var reg 4 : min_h [3:0] $end
+$var reg 1 ; state $end
+$upscope $end
+$scope module key_d $end
+$var wire 1 - btn_clk $end
+$var wire 1 < rst $end
+$var wire 2 , btn_in [1:0] $end
+$var wire 2 / btn_out [1:0] $end
+$var reg 2 = btn0 [1:0] $end
+$var reg 2 > btn1 [1:0] $end
+$var reg 2 ? btn2 [1:0] $end
+$upscope $end
+$scope module smg_R4 $end
+$var wire 1 - clk $end
+$var wire 1 @ rst $end
+$var wire 16 A dispdata [15:0] $end
+$var reg 8 B seg [7:0] $end
+$var reg 4 C an [3:0] $end
+$var reg 17 D divclk_cnt [16:0] $end
+$var reg 1 E divclk $end
+$var reg 4 F disp_dat [3:0] $end
+$var reg 2 G disp_bit [1:0] $end
+$var parameter 16 H maxcnt [15:0] $end
+$upscope $end
+$scope module smg_L2 $end
+$var wire 1 - clk $end
+$var wire 1 I rst $end
+$var wire 16 J dispdata [15:0] $end
+$var reg 8 K seg [7:0] $end
+$var reg 4 L an [3:0] $end
+$var reg 17 M divclk_cnt [16:0] $end
+$var reg 1 N divclk $end
+$var reg 4 O disp_dat [3:0] $end
+$var reg 2 P disp_bit [1:0] $end
+$var parameter 16 Q maxcnt [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11 !
+0"
+bx #
+bx $
+b0xxxxxx %
+b0 &
+b0 '
+b0 (
+b0 )
+b0 *
+b10100 +
+b11 ,
+0-
+b0 .
+b0 /
+b111111 0
+01
+02
+b0 3
+04
+b0 5
+b0 6
+b0 7
+b0 8
+b0 9
+b0 :
+x;
+0<
+b0 =
+b0 >
+b0 ?
+0@
+b0 A
+bx B
+b0 C
+b0 D
+0E
+bx F
+b0 G
+b1100001101010000 H
+0I
+b0 J
+bx K
+b0 L
+b0 M
+0N
+bx O
+b0 P
+b1100001101010000 Q
+$end
+#10000
+1"
+1-
+0;
+#20000
+b10 !
+0"
+b10 ,
+0-
+12
+1<
+1@
+1I
+#30000
+1"
+1-
+b0 /
+01
+b1 3
+b10 =
+b1 D
+b1 M
+#40000
+b11 !
+0"
+b11 ,
+0-
+b0 /
+01
+02
+b0 3
+b0 5
+b0 6
+b0 7
+b0 8
+b0 9
+b0 :
+0<
+b0 =
+0@
+b0 D
+0I
+b0 M
+#50000
+1"
+1-
+#60000
+b1 !
+0"
+b1 &
+b1 '
+b1 )
+b1 ,
+0-
+#70000
+1"
+1-
+#80000
+0"
+0-
+#90000
+1"
+1-
+#100000
+b11 !
+0"
+b11 ,
+0-
+#110000
+1"
+1-
+#120000
+0"
+0-
+#130000
+1"
+1-
+#140000
+b11 !
+0"
+0-
+#150000
+1"
+1-
+#160000
+0"
+0-
+#170000
+1"
+1-
+#180000
+b11 !
+0"
+0-
+#190000
+1"
+1-
+#200000
+0"
+0-
+#210000
+1"
+1-
+#220000
+b11 !
+0"
+0-
+#230000
+1"
+1-
+#240000
+0"
+0-
+#250000
+1"
+1-
+#260000
+b11 !
+0"
+0-
+#270000
+1"
+1-
+#280000
+0"
+0-
+#290000
+1"
+1-
+#300000
+0"
+0-
+#310000
+1"
+1-
+#320000
+0"
+0-
+#330000
+1"
+1-
+#340000
+0"
+0-
+#350000
+1"
+1-
+#360000
+0"
+0-
+#370000
+1"
+1-
+#380000
+0"
+0-
+#390000
+1"
+1-
+#400000
+0"
+0-
+#410000
+1"
+1-
+#420000
+0"
+0-
+#430000
+1"
+1-
+#440000
+0"
+0-
+#450000
+b1 !
+1"
+b10 &
+b1 (
+b10 )
+b1 ,
+1-
+#460000
+0"
+0-
+#470000
+1"
+1-
+#480000
+0"
+0-
+#490000
+1"
+1-
+#500000
+0"
+0-
+#510000
+1"
+1-
+#520000
+0"
+0-
+#530000
+1"
+1-
+#540000
+0"
+0-
+#550000
+b11 !
+1"
+b11 ,
+1-
+#560000
+0"
+0-
+#570000
+1"
+1-
+#580000
+0"
+0-
+#590000
+1"
+1-
+#600000
+0"
+0-
+#610000
+1"
+1-
+#620000
+0"
+0-
+#630000
+1"
+1-
+#640000
+0"
+0-
+#650000
+1"
+1-
+#660000
+0"
+0-
+#670000
+1"
+1-
+#680000
+0"
+0-
+#690000
+1"
+1-
+#700000
+0"
+0-
+#710000
+1"
+1-
+#720000
+0"
+0-
+#730000
+1"
+1-
+#740000
+0"
+0-
+#750000
+b1 !
+1"
+b1 ,
+1-
+#760000
+0"
+0-
+#770000
+1"
+1-
+#780000
+0"
+0-
+#790000
+1"
+1-
+#800000
+0"
+0-
+#810000
+1"
+1-
+#820000
+0"
+0-
+#830000
+1"
+1-
+#840000
+0"
+0-
+#850000
+1"
+1-
+#860000
+0"
+0-
+#870000
+1"
+1-
+#880000
+0"
+0-
+#890000
+1"
+1-
+#900000
+0"
+0-
+#910000
+1"
+1-
+#920000
+0"
+0-
+#930000
+1"
+1-
+#940000
+0"
+0-
+#950000
+1"
+1-
+#960000
+0"
+0-
+#970000
+1"
+1-
+#980000
+0"
+0-
+#990000
+1"
+1-
+#1000000
+0"
+0-

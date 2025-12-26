@@ -33,19 +33,26 @@ module count_ctrl(
     reg [3:0] sec_h;
     reg [3:0] min_l;
     reg [3:0] min_h;
-    reg state;
+    reg [1:0]state;
+    reg start_stop_dly;
     assign disp_time = {min_h, min_l, sec_h, sec_l, msec_h, msec_l};
     
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk or negedge rst) begin
         if (!rst) begin
             state <= 2'b00;
-        end else if (start_stop) begin  // 按钮按下
-            case (state)
-                2'b00: state <= 2'b01;  // 空闲 -> 运行
-                2'b01: state <= 2'b10;  // 运行 -> 暂停
-                2'b10: state <= 2'b01;  // 暂停 -> 运行
-                default: state <= 2'b00;
-            endcase
+            start_stop_dly <= 1'b0;  // 清零延迟寄存器
+        end else begin
+            start_stop_dly <= start_stop;  // 延迟一拍
+            
+            // 检测上升沿（真正的"按下"动作）
+            if (start_stop && !start_stop_dly) begin
+                case (state)
+                    2'b00: state <= 2'b01;  // 空闲 -> 运行
+                    2'b01: state <= 2'b10;  // 运行 -> 暂停
+                    2'b10: state <= 2'b01;  // 暂停 -> 运行
+                    default: state <= 2'b00;
+                endcase
+            end
         end
     end
     
