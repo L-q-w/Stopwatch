@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Stopwatch.srcs/sources_1/new/Stopwatch.v" \
+"../../../../Stopwatch.srcs/sources_1/new/count_ctrl.v" \
+"../../../../Stopwatch.srcs/sources_1/new/key_debounce.v" \
+"../../../../Stopwatch.srcs/sources_1/new/smg.v" \
+"../../../../Stopwatch.srcs/sim_1/new/tb_stopwatch.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

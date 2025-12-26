@@ -1,0 +1,10 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sim_1/new/tb_stopwatch.v,1766726365,verilog,,,,tb_stopwatch,,,,,,,,
+D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sources_1/new/Stopwatch.v,1766718940,verilog,,D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sources_1/new/count_ctrl.v,,Stopwatch,,,,,,,,
+D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sources_1/new/count_ctrl.v,1766719574,verilog,,D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sources_1/new/key_debounce.v,,count_ctrl,,,,,,,,
+D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sources_1/new/key_debounce.v,1766716885,verilog,,D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sources_1/new/smg.v,,key_debounce,,,,,,,,
+D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sources_1/new/smg.v,1766725165,verilog,,D:/Pack/Creation/Vivado/Stopwatch/Stopwatch.srcs/sim_1/new/tb_stopwatch.v,,smg,,,,,,,,
